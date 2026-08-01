@@ -8,8 +8,9 @@ services:
     user: "${UID}:${GID}"
     environment:
       - TZ=Europe/Amsterdam
-      - MQTT_USER=UVE22meTGCoeQXmeoCN5LiTT
-      - MQTT_PASS=KTcWhY2shYvTL9S6hPtWfwdA
+      # Local dev only — set real credentials via environment, never commit real values
+      - MQTT_USER=changeme
+      - MQTT_PASS=changeme
       - PUID=${UID}
       - PGID=${GID}
     ports:
