@@ -14,6 +14,16 @@ Deploy MQTT on railway.app with a single click.
 * Timezone Support (Set timezone in environment variables)
 * Railway config as code via `railway.toml`
 
+## 🏗️ Architecture
+
+```mermaid
+flowchart LR
+    Client(["📡 MQTT Client"]) -->|"MQTT / TCP"| Proxy["Railway TCP Proxy"]
+    Proxy -->|"$PORT → 1883"| Entry["docker-entrypoint.sh"]
+    Entry --> App["Container\neclipse-mosquitto"]
+    App --> Volume[("Volume\n/mosquitto/data")]
+```
+
 ## 🐍 How to Deploy
 
 1. Click Deploy on Railway and setup your credentials in the environment variables
