@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.1](https://github.com/vergissberlin/railwayapp-mqtt/compare/v0.2.0...v0.2.1) (2026-08-20)
+
+
+### Documentation
+
+* refresh shared template footer badges ([7d7c54c](https://github.com/vergissberlin/railwayapp-mqtt/commit/7d7c54c2e914fc1235df050e06fb763d6a4dbb70))
+
+
+### Chores
+
+* update shared template footer ([7126c87](https://github.com/vergissberlin/railwayapp-mqtt/commit/7126c87bb7849849f4655a02bc55a86ae56be388))
+* update shared template footer ([9eca710](https://github.com/vergissberlin/railwayapp-mqtt/commit/9eca710864f0e3e8caa78005264c77bcc5d8657f))
+
 ## [0.2.0](https://github.com/vergissberlin/railwayapp-mqtt/compare/v0.1.0...v0.2.0) (2026-08-14)
 
 
