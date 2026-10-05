@@ -19,7 +19,7 @@ Deploy MQTT on railway.app with a single click.
 ```mermaid
 flowchart LR
     Client(["📡 MQTT Client"]) -->|"MQTT / TCP"| Proxy["Railway TCP Proxy"]
-    Proxy -->|"$PORT → 1883"| Entry["docker-entrypoint.sh"]
+    Proxy -->|"TCP port 1883"| Entry["docker-entrypoint.sh"]
     Entry --> App["Container\neclipse-mosquitto"]
     App --> Volume[("Volume\n/mosquitto/data")]
 ```
@@ -44,7 +44,9 @@ flowchart LR
 * Keep external TCP port mapped to `1883`
 
 2. Wait for Build & Deployment to Finish
-3. Open the custom URL an enter your credentials
+3. Connect an MQTT client to the generated TCP proxy hostname and external port, using your credentials. MQTT has no HTTP login page.
+
+The published template generates a broker password, maps the TCP proxy to port `1883`, and mounts `/mosquitto/data`. The entrypoint gives Mosquitto access to its password file and data directory, and regenerates its password file atomically on restart. Logs go to stdout. The Docker healthcheck authenticates when credentials are configured; Railway's HTTP healthcheck is intentionally unset for this TCP service.
 
 ## 🐳  Local Development
 
@@ -52,7 +54,14 @@ flowchart LR
 docker compose up -d
 ```
 
-Connect to http://localhost:1883 use setup username & password from docker-compose file to login to MQTT.
+Connect an MQTT client to `localhost:1883`, using the username and password from the Compose configuration.
+
+Run the Docker integration tests (Docker and Node.js required):
+
+```bash
+docker build -t railwayapp-mqtt:test .
+node --test tests/runtime.test.mjs
+```
 
 <!-- footer -->
 ---
