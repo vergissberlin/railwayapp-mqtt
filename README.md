@@ -63,6 +63,10 @@ docker build -t railwayapp-mqtt:test .
 node --test tests/runtime.test.mjs
 ```
 
+## 💬 Support
+
+Questions or feedback? Visit the [template forum on Railway Central Station](https://station.railway.com/templates/mosquitto-mqtt-71cf53c1).
+
 <!-- footer -->
 ---
 
