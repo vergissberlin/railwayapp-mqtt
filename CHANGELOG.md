@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.2](https://github.com/vergissberlin/railwayapp-mqtt/compare/v0.2.1...v0.2.2) (2026-10-28)
+
+
+### Bug Fixes
+
+* pin eclipse-mosquitto to 2.1.2-alpine ([#14](https://github.com/vergissberlin/railwayapp-mqtt/issues/14)) ([1d0de3f](https://github.com/vergissberlin/railwayapp-mqtt/commit/1d0de3fcaec9bef3ce09c17ca4b04a40d1286621))
+
+
+### Documentation
+
+* fix Railway deploy button link and add template forum link ([#12](https://github.com/vergissberlin/railwayapp-mqtt/issues/12)) ([116c4ff](https://github.com/vergissberlin/railwayapp-mqtt/commit/116c4ff70727c36ca17670eabdf39bf98b4816eb))
+
 ## [0.2.1](https://github.com/vergissberlin/railwayapp-mqtt/compare/v0.2.0...v0.2.1) (2026-10-06)
 
 
