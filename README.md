@@ -5,7 +5,7 @@
 
 Deploy MQTT on railway.app with a single click.
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/C09s2G?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/mosquitto-mqtt?referralCode=2_sIT9&utm_medium=integration&utm_source=template&utm_campaign=generic)
 
 ## ✨ Features
 
@@ -62,6 +62,10 @@ Run the Docker integration tests (Docker and Node.js required):
 docker build -t railwayapp-mqtt:test .
 node --test tests/runtime.test.mjs
 ```
+
+## 💬 Support
+
+Questions or feedback? Visit the [template forum on Railway Central Station](https://station.railway.com/templates/mosquitto-mqtt-71cf53c1).
 
 <!-- footer -->
 ---
